@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Random;
 
 public class Controller {
-    
+
     @FXML
     private Label tx1;
     @FXML
