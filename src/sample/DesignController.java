@@ -29,57 +29,45 @@ public class DesignController implements Initializable {
 
     @FXML
     public void tx1Click(){
-//        modeBtn.setVisible(false);
         placeX(1);
-
     }
     @FXML
     public void tx2Click(){
-//        modeBtn.setVisible(false);
         placeX(2);
     }
     @FXML
     public void tx3Click(){
-//        modeBtn.setVisible(false);
         placeX(3);
     }
     @FXML
     public void tx4Click(){
-//        modeBtn.setVisible(false);
         placeX(4);
     }
     @FXML
     public void tx5Click(){
-//        modeBtn.setVisible(false);
         placeX(5);
     }
     @FXML
     public void tx6Click(){
-//        modeBtn.setVisible(false);
         placeX(6);
     }
     @FXML
     public void tx7Click(){
-//        modeBtn.setVisible(false);
         placeX(7);
     }
     @FXML
     public void tx8Click(){
-//        modeBtn.setVisible(false);
         placeX(8);
     }
     @FXML
     public void tx9Click(){
-//        modeBtn.setVisible(false);
         placeX(9);
     }
 
     @FXML
     public void newGame(){
         clearScene();
-//        modeBtn.setVisible(true);
     }
-
 
     @FXML
     public void placeX(int pos){
@@ -181,8 +169,7 @@ public class DesignController implements Initializable {
     }
 
     public static String checkWinner(){
-//        String p1Name = name1P;
-//        String p2Name = name2P;
+        
         List topRow = Arrays.asList(1, 2, 3);
         List midRow = Arrays.asList(4, 5, 6);
         List botRow = Arrays.asList(7, 8, 9);
