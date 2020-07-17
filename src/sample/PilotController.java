@@ -27,7 +27,6 @@ public class PilotController implements Initializable{
         controller.lbl2.setVisible(false);
         controller.flag2P = false;
 
-
         //creating new scene obj
         Scene newScene = new Scene(root);
 
@@ -50,7 +49,6 @@ public class PilotController implements Initializable{
         controller.tF2.setVisible(true);
         controller.lbl2.setVisible(true);
         controller.flag2P = true;
-
 
         //creating new scene obj
         Scene newScene = new Scene(root);
