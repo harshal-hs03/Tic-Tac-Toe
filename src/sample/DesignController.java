@@ -68,6 +68,7 @@ public class DesignController implements Initializable {
         placeX(9);
     }
 
+
     @FXML
     public void placeX(int pos){
         if(playerPositions.contains(pos) || cpuPositions.contains(pos)){
