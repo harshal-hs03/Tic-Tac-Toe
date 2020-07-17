@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -20,6 +21,8 @@ public class DesignController implements Initializable {
     private Label tx1, tx2, tx3, tx4, tx5, tx6, tx7, tx8, tx9;
     @FXML
     private TextField playerIp;
+    @FXML
+    private Line str123, str456, str789, str147, str258, str369, str159, str753;
 
     private static List<Integer> playerPositions = new ArrayList<>();
     private static List<Integer> cpuPositions = new ArrayList<>();
@@ -29,57 +32,46 @@ public class DesignController implements Initializable {
 
     @FXML
     public void tx1Click(){
-//        modeBtn.setVisible(false);
         placeX(1);
 
     }
     @FXML
     public void tx2Click(){
-//        modeBtn.setVisible(false);
         placeX(2);
     }
     @FXML
     public void tx3Click(){
-//        modeBtn.setVisible(false);
         placeX(3);
     }
     @FXML
     public void tx4Click(){
-//        modeBtn.setVisible(false);
         placeX(4);
     }
     @FXML
     public void tx5Click(){
-//        modeBtn.setVisible(false);
         placeX(5);
     }
     @FXML
     public void tx6Click(){
-//        modeBtn.setVisible(false);
         placeX(6);
     }
     @FXML
     public void tx7Click(){
-//        modeBtn.setVisible(false);
         placeX(7);
     }
     @FXML
     public void tx8Click(){
-//        modeBtn.setVisible(false);
         placeX(8);
     }
     @FXML
     public void tx9Click(){
-//        modeBtn.setVisible(false);
         placeX(9);
     }
 
-    @FXML
-    public void newGame(){
-        clearScene();
-//        modeBtn.setVisible(true);
-    }
-
+//    @FXML
+//    public void newGame(){
+//        clearScene();
+//    }
 
     @FXML
     public void placeX(int pos){
@@ -162,6 +154,14 @@ public class DesignController implements Initializable {
         playerIp.clear();
         playerPositions.clear();
         cpuPositions.clear();
+        str123.setVisible(false);
+        str456.setVisible(false);
+        str789.setVisible(false);
+        str147.setVisible(false);
+        str258.setVisible(false);
+        str369.setVisible(false);
+        str159.setVisible(false);
+        str753.setVisible(false);
     }
 
     public void playAgainPopUp(String result){
@@ -180,7 +180,7 @@ public class DesignController implements Initializable {
         }
     }
 
-    public static String checkWinner(){
+    public String checkWinner(){
 //        String p1Name = name1P;
 //        String p2Name = name2P;
         List topRow = Arrays.asList(1, 2, 3);
@@ -204,8 +204,10 @@ public class DesignController implements Initializable {
 
         for(List l : winOpt){
             if(playerPositions.containsAll(l)){
+                strikeThrough(l);
                 return "Congrats "+name1P+"!, you won!";
             } else if(cpuPositions.containsAll(l)){
+                strikeThrough(l);
                 return "Oops "+name1P+", you lost by "+name2P+". Better luck next time!";
             }
         }
@@ -214,6 +216,27 @@ public class DesignController implements Initializable {
             return "it's a tie!";
         }else
             return "";
+    }
+
+    @FXML
+    public void strikeThrough(List list){
+        if(list.equals(Arrays.asList(1, 2, 3))){
+            str123.setVisible(true);
+        } else if(list.equals(Arrays.asList(4, 5, 6))){
+            str456.setVisible(true);
+        } else if(list.equals(Arrays.asList(7, 8, 9))){
+            str789.setVisible(true);
+        } else if(list.equals(Arrays.asList(1, 4, 7))){
+            str147.setVisible(true);
+        } else if(list.equals(Arrays.asList(2, 5, 8))){
+            str258.setVisible(true);
+        } else if(list.equals(Arrays.asList(3, 6, 9))){
+            str369.setVisible(true);
+        } else if(list.equals(Arrays.asList(1, 5, 9))){
+            str159.setVisible(true);
+        } else if(list.equals(Arrays.asList(7, 5, 3))){
+            str753.setVisible(true);
+        }
     }
 
     public void updatePlacement(int pos, String user) {
@@ -272,7 +295,7 @@ public class DesignController implements Initializable {
     public void backBtn(ActionEvent event) throws Exception{
 
         clearScene();
-        //              loading the contents of new scene
+//        loading the contents of new scene
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("UserName.fxml"));
         Parent root = (Parent) fxmlLoader.load();
 
