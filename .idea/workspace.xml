@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Adding strikeThrough lines">
-      <change beforePath="$PROJECT_DIR$/src/sample/Design.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Design.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/DesignController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/DesignController.java" afterDir="false" />
-    </list>
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Adding strikeThrough lines" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +69,11 @@
     <option name="PATH_TO_GIT" value="C:\Program Files\Git\bin\git.exe" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="master" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="harshal-hs03" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="Tic-Tac-Toe" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectId" id="1dTi12d3o0jAHlPpnyinDQkEzFS" />
@@ -221,6 +223,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Adding strikeThrough lines" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="23" key="#Notifications" timestamp="1595009859971">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="23" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1595009859971" />
     <state x="275" y="23" key="#Project_Structure" timestamp="1592929486183">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -245,26 +251,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="281" width="356" height="166" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1592928891116" />
+    <state x="451" y="232" key="Github.CreatePullRequestDialog" timestamp="1595009921709">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="451" y="232" key="Github.CreatePullRequestDialog/0.0.1366.728@0.0.1366.728" timestamp="1595009921709" />
     <state x="552" y="258" width="453" height="211" key="Github.ShareDialog" timestamp="1592928789622">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="552" y="258" width="453" height="211" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1592928789622" />
-    <state width="1323" height="388" key="GridCell.Tab.0.bottom" timestamp="1595008997776">
+    <state width="1323" height="388" key="GridCell.Tab.0.bottom" timestamp="1595010218091">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="388" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595008997776" />
-    <state width="1323" height="388" key="GridCell.Tab.0.center" timestamp="1595008997775">
+    <state width="1323" height="388" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595010218091" />
+    <state width="1323" height="388" key="GridCell.Tab.0.center" timestamp="1595010218091">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="388" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595008997775" />
-    <state width="1323" height="388" key="GridCell.Tab.0.left" timestamp="1595008997775">
+    <state width="1323" height="388" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595010218091" />
+    <state width="1323" height="388" key="GridCell.Tab.0.left" timestamp="1595010218091">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="388" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595008997775" />
-    <state width="1323" height="388" key="GridCell.Tab.0.right" timestamp="1595008997776">
+    <state width="1323" height="388" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595010218091" />
+    <state width="1323" height="388" key="GridCell.Tab.0.right" timestamp="1595010218091">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="388" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595008997776" />
+    <state width="1323" height="388" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595010218091" />
+    <state x="129" y="61" key="MergeDialog" timestamp="1595010054267">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="129" y="61" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1595010054267" />
+    <state x="395" y="81" key="MultipleFileMergeDialog" timestamp="1595010054276">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="395" y="81" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1595010054276" />
     <state x="184" y="7" key="SettingsEditor" timestamp="1592930193949">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -281,6 +299,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1594998667767" />
+    <state x="373" y="156" key="git4idea.merge.GitPullDialog" timestamp="1595009974794">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="373" y="156" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1595009974794" />
     <state x="65" y="67" key="new project wizard" timestamp="1592757221999">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
