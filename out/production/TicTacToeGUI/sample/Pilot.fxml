@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="50.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PilotController">
+    <children>
+        <Label text="Welcome To Tic-Tac-Toe">
+            <font>
+                <Font name="Comic Sans MS Bold" size="25.0" />
+            </font>
+        </Label>
+        <Label text="Press on the preferred game mode to start">
+            <font>
+                <Font name="System Italic" size="13.0" />
+            </font>
+        </Label>
+        <Button fx:id="sBtn" mnemonicParsing="false" onAction="#changeWindowTo1P" text="Single - Player" />
+        <Button fx:id="tBtn" mnemonicParsing="false" onAction="#changeWindowTo2P" text="Two - Players" />
+    </children>
+</VBox>

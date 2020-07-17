@@ -5,11 +5,11 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DesignController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerCopy">
    <children>
-      <Accordion layoutX="14.0" layoutY="14.0" prefHeight="196.0" prefWidth="153.0">
+      <Accordion layoutX="14.0" layoutY="14.0" prefHeight="196.0" prefWidth="154.0">
         <panes>
-          <TitledPane animated="false" prefHeight="146.0" prefWidth="151.0" text="Go Back">
+          <TitledPane animated="false" text="Go Back">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -29,7 +29,7 @@
                   </AnchorPane>
             </content>
           </TitledPane>
-          <TitledPane animated="false" prefHeight="122.0" prefWidth="154.0" text="Keboard Input">
+          <TitledPane animated="false" prefHeight="122.0" prefWidth="154.0" text="Enable Keboard Input">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>

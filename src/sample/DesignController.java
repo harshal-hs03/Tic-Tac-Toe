@@ -1,116 +1,85 @@
 package sample;
 
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.BorderPane;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
+import javafx.stage.Stage;
 
-public class Controller {
+import java.net.URL;
+import java.util.*;
 
+public class DesignController implements Initializable {
 
     @FXML
-    private Label tx1;
-    @FXML
-    private Label tx2;
-    @FXML
-    private Label tx3;
-    @FXML
-    private Label tx4;
-    @FXML
-    private Label tx5;
-    @FXML
-    private Label tx6;
-    @FXML
-    private Label tx7;
-    @FXML
-    private Label tx8;
-    @FXML
-    private Label tx9;
-    @FXML
-    private Label btmLabel;
+    private Label tx1, tx2, tx3, tx4, tx5, tx6, tx7, tx8, tx9;
     @FXML
     private TextField playerIp;
-    @FXML
-    private Button okBtn;
-    @FXML
-    private Button enableKeyIpBtn;
-    @FXML
-    private Button modeBtn;
-    @FXML
-    private BorderPane mainBorderPane;
 
     private static List<Integer> playerPositions = new ArrayList<>();
     private static List<Integer> cpuPositions = new ArrayList<>();
     private boolean flag = true;
-    private boolean multiplayer = false;
+    private boolean multiplayer;
+    private static String name1P, name2P;
 
     @FXML
     public void tx1Click(){
-        modeBtn.setVisible(false);
-       placeX(1);
+//        modeBtn.setVisible(false);
+        placeX(1);
 
     }
     @FXML
     public void tx2Click(){
-        modeBtn.setVisible(false);
+//        modeBtn.setVisible(false);
         placeX(2);
     }
     @FXML
     public void tx3Click(){
-        modeBtn.setVisible(false);
+//        modeBtn.setVisible(false);
         placeX(3);
     }
     @FXML
     public void tx4Click(){
-        modeBtn.setVisible(false);
+//        modeBtn.setVisible(false);
         placeX(4);
     }
     @FXML
     public void tx5Click(){
-        modeBtn.setVisible(false);
+//        modeBtn.setVisible(false);
         placeX(5);
     }
     @FXML
     public void tx6Click(){
-        modeBtn.setVisible(false);
+//        modeBtn.setVisible(false);
         placeX(6);
     }
     @FXML
     public void tx7Click(){
-        modeBtn.setVisible(false);
+//        modeBtn.setVisible(false);
         placeX(7);
     }
     @FXML
     public void tx8Click(){
-        modeBtn.setVisible(false);
+//        modeBtn.setVisible(false);
         placeX(8);
     }
     @FXML
     public void tx9Click(){
-        modeBtn.setVisible(false);
+//        modeBtn.setVisible(false);
         placeX(9);
     }
 
     @FXML
     public void newGame(){
         clearScene();
-        modeBtn.setVisible(true);
+//        modeBtn.setVisible(true);
     }
 
-    @FXML
-    public void modeChange(){
-        multiplayer = !multiplayer;
-        if(multiplayer){
-            modeBtn.setText("Switch to Single-Player");
-        } else {
-            modeBtn.setText("Switch to Two-Player");
-        }
-        clearScene();
-    }
 
     @FXML
     public void placeX(int pos){
@@ -160,24 +129,9 @@ public class Controller {
         }
     }
 
-    public void enableKeyboardIp(){
-        if(enableKeyIpBtn.getText().equals("Enable Keyboard Input")) {
-            btmLabel.setVisible(true);
-            playerIp.setVisible(true);
-            okBtn.setVisible(true);
-            enableKeyIpBtn.setText("Disable Keyboard Input");
-        } else if(enableKeyIpBtn.getText().equals("Disable Keyboard Input")){
-            btmLabel.setVisible(false);
-            playerIp.setVisible(false);
-            okBtn.setVisible(false);
-            enableKeyIpBtn.setText("Enable Keyboard Input");
-        }
-    }
-
     //This function is for processing the input number(1 to 9) provided in the textField
     @FXML
     public void onBtnClick(){
-        modeBtn.setVisible(false);
         int input = Integer.parseInt(playerIp.getText());
         if((input > 0) && (input <= 9)){
             playerIp.clear();
@@ -192,7 +146,6 @@ public class Controller {
             playerIp.clear();
             return;
         }
-
     }
 
     @FXML
@@ -209,7 +162,6 @@ public class Controller {
         playerIp.clear();
         playerPositions.clear();
         cpuPositions.clear();
-        modeBtn.setText((multiplayer) ? "Switch to Single-Player" : "Switch to Two-Player");
     }
 
     public void playAgainPopUp(String result){
@@ -222,7 +174,6 @@ public class Controller {
 
         if (alert.getResult() == ButtonType.YES) {
             clearScene();
-            modeBtn.setVisible(true);
         } else if(alert.getResult() == ButtonType.NO) {
             clearScene();
             Platform.exit();
@@ -230,6 +181,8 @@ public class Controller {
     }
 
     public static String checkWinner(){
+//        String p1Name = name1P;
+//        String p2Name = name2P;
         List topRow = Arrays.asList(1, 2, 3);
         List midRow = Arrays.asList(4, 5, 6);
         List botRow = Arrays.asList(7, 8, 9);
@@ -251,9 +204,9 @@ public class Controller {
 
         for(List l : winOpt){
             if(playerPositions.containsAll(l)){
-                return "Congrats, you won!";
+                return "Congrats "+name1P+"!, you won!";
             } else if(cpuPositions.containsAll(l)){
-                return "Oops, you lose. Better luck next time!";
+                return "Oops "+name1P+", you lost by "+name2P+". Better luck next time!";
             }
         }
 
@@ -305,4 +258,81 @@ public class Controller {
                 break;
         }
     }
+
+    public void setNames(String p1, String p2){
+        name1P = p1;
+        name2P = p2;
+    }
+
+    public void setMode(boolean modeFlag){
+        multiplayer = modeFlag;
+    }
+
+    @FXML
+    public void backBtn(ActionEvent event) throws Exception{
+
+        clearScene();
+        //              loading the contents of new scene
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("UserName.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
+
+//        getting the access to main controller to pass the player names
+        UserNameController controller = (UserNameController) fxmlLoader.getController();
+
+        if(!multiplayer){
+            controller.tF2.setVisible(false);
+            controller.lbl2.setVisible(false);
+        }
+
+        //creating new scene obj
+        Scene newScene = new Scene(root);
+
+        //getting control of the main window (stage)
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        //setting the new scene to the window
+        window.setScene(newScene);
+        window.show();
+    }
+
+    @FXML
+    public void homeBtn(ActionEvent event) throws Exception{
+
+        clearScene();
+        //loading the contents of new scene
+        Parent root = FXMLLoader.load(getClass().getResource("Pilot.fxml"));
+
+        //creating new scene obj
+        Scene newScene = new Scene(root);
+
+        //getting control of the main window (stage)
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        //setting the new scene to the window
+        window.setScene(newScene);
+        window.show();
+    }
+
+    @FXML
+    public void exitBtn(){
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "result", ButtonType.YES, ButtonType.NO);
+        alert.setHeaderText("Exit Confirmation");
+        alert.setContentText("Are you sure, you want to exit ?");
+        alert.setTitle("Exit");
+        alert.showAndWait();
+
+        if (alert.getResult() == ButtonType.YES) {
+            clearScene();
+            Platform.exit();
+        }
+    }
+
+    //    this is needed for the previous controller to get control of this one
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
 }
+
+
+

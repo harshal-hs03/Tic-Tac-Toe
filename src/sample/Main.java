@@ -11,7 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        Parent root = FXMLLoader.load(getClass().getResource("Design.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Pilot.fxml"));
         primaryStage.setTitle("Tic Tac Toe");
         primaryStage.setScene(new Scene(root, 600, 500));
 
